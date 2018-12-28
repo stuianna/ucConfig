@@ -1,1 +1,0 @@
-../../../globLib/common/lib/ucconfig.h
