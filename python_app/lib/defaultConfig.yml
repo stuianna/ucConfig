@@ -1,0 +1,74 @@
+## Global parameters ##
+
+- name: serialPort
+  default: /dev/ttyACM0
+  desc: Serial port UC is connected to.
+  min: None
+  max: None
+
+- name: baud
+  default: 115200
+  desc: Baud rate for serial connection, must match UC baud rate.
+  min: 9600
+  max: 115200
+
+- name: readTimeout
+  default: 0.4
+  desc: The maximum number of seconds to wait for serial data from UC during communication
+  min: 0.01
+  max: 2
+
+- name: logLevel
+  default: 30
+  desc: Log level, 10 = debug, 20 = info, 30 = warning, 40 = error, 50 = critical
+  min: 0
+  max: 50
+
+- name: retries
+  default: 3
+  desc: The number of times to retry sending data to the microcontrolller if an error occurs.
+  min: 1
+  max: 10
+
+## Testing parameters ##
+- name: test_UC_coms_testSize
+  default: 100
+  desc: The maximum number of bytes a single test containts, the value is random, so 1 < test < testSize
+  min: 1
+  max: 1000
+
+- name: test_UC_coms_testNumber
+  default: 10
+  desc: Test UC number of test repeats completed of full exansions
+  min: 1
+  max: 1000
+
+- name: test_UC_coms_retries
+  default: 10
+  desc: Test UC  number of retries when an incorrect transmission occurs
+  min: 0
+  max: 10
+
+- name: test_full_testSize
+  default: 100
+  desc: The maximum number of bytes a single test containts, the value is random, so 1 < test < testSize
+  min: 1
+  max: 1000
+
+- name: test_full_testNumber
+  default: 20
+  desc: Test UC number of test repeats completed of full exansions
+  min: 1
+  max: 1000
+
+- name: test_full_retries
+  default: 3
+  desc: Test UC  number of retries when an incorrect transmission occurs
+  min: 0
+  max: 10
+
+- name: test_UC_coms_logLevel
+  default: 30
+  desc: Test UC Log level, 10 = debug, 20 = info, 30 = warning, 40 = error, 50 = critical
+  min: 0
+  max: 50
