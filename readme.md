@@ -462,11 +462,10 @@ Additional variables can be added by duplicating the single variable example as 
 
 ### Generating the Header File
 
-Now that the variables file is complete the header file can be generated. From the same directory as the variables.yml file is locatin (src) run the following command: ``` ucConfig -q -i variables.yml -o variables.h```
+Now that the variables file is complete the header file can be generated. From the same directory as the variables.yml file is locatin (src) run the following command: ``` ucConfig -q variables.yml -o variables.h```
 
 The options specified perfom the following:
 
-- -i Specifies the name of the input *.yml file
 - -o Specifies the name of the output *.h C header file.
 - -q Query the variable file. This has two functions, firstly the parsed variable are printed to stdout, allowing them to be checked. Secondly, it prevents the variables being sent to the embedded device, which at this point has not had its program compiled or deployed.
 
@@ -687,7 +686,7 @@ name: HIGH_DELAY
 value: 200 
 ```
 
-The new header file can be generated with ```ucConfig -q -i variables.yml -o variables.h```. The embedded program then can be recompiled and deployed.
+The new header file can be generated with ```ucConfig -q variables.yml -o variables.h```. The embedded program then can be recompiled and deployed.
 
 The device can now be sent the new or any continually updated values using ```ucConfig -i variables.yml``` as many times as necessary.
 
