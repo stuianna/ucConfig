@@ -1,18 +1,30 @@
+# Introduction
+
+The python API is separated into three different modules, all located in the lib directory, documentation is being developed for their usage.
+
+The command line application is contained in main.py with a shell script wrapper ucConfig-dev pointing to it.
+
+Python and all required packages need to be installed to use the dev version. Using the binaries under 'releases' is the easiest way to use ucConfig.
+
+# Examples
+
+Example usage of the API is to make at a later date.
+
 # Build Instruction
 
-pyinstaller is used to build generate a single file executable. This needs to be run on each platform which the program requires to run.
+Pyinstaller is used to build generate a single file executable. This needs to be run on each platform which the program requires to run.
 
 Pyinstaller doesn't work with anaconda. To use pyinstaller the addition to the PATH variable in .bashrc can be commented out while the program is built
 
 To use pyinstaller:
 
-1. From the main directory run:
+1. From the main python directory run:
 ```
-pyi-makespec main.py -n ucConfig --onefile
+pyi-makespec main.py -n ucConfig_linux --onefile
 ```
 This will generate a file ucConfig.spec.
 
-2. Inside ucConfig.spec change:
+2. Inside ucConfig_linux.spec change:
 ```
 datas=[],
 ```
@@ -24,7 +36,7 @@ to include the default configuration file and testing temp variables file in the
 
 3. From the main directory run
 ```
-pyinstall ucconfig.spec
+pyinstaller ucConfig_linux.spec
 ```
 to build the package
 

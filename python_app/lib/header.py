@@ -4,7 +4,7 @@ import logging
 import datetime
 import yaml
 
-version = 0.1
+__version__ = '0.1.0-alpha'
 
 ##########################
     #Variable types
@@ -201,6 +201,14 @@ class Header():
             index = self.getTypeIndex(data['dataType'])
             data['size'] = types[index]['size']
 
+        ##Check for duplicate varaible names
+        varNames = np.array([d['name'] for d in dataList])
+
+        for var in varNames:
+            if len(np.where(varNames == var)[0]) > 1:
+                logging.warning('Cannot have duplicate variable names, duplicate: {}'.format(var))
+                return None
+
         return dataList
 
     def generateExample(self,filename):
@@ -333,7 +341,7 @@ class Header():
         outStream = outStream + '#define UCCONFIG_GEN_H\n'
         outStream = outStream + '/*!\n'
         outStream = outStream + '\t@file ' + filename +  '\n'
-        outStream = outStream + '\t@brief ' + 'UC Config version {} automatically generated C header file.'.format(version) +  '\n'
+        outStream = outStream + '\t@brief ' + 'UcConfig V{} automatically generated C header file.'.format(__version__) +  '\n'
         outStream = outStream + '\t@details Generated: ' + datetime.datetime.strftime(datetime.datetime.now(),'%c') + '\n'
         outStream = outStream + '\tInclude this file in embedded programs code' + '\n'
         outStream = outStream + '*/\n'

@@ -1,0 +1,16 @@
+#Ignore build directories
+python_app/build/
+python_app/dist/
+
+#Ignore config file generated during development
+python_app/config.yml
+
+#Ignore this puppy
+python_app/__pycache__/
+
+#Ignore build files
+*.spec
+
+#Ignore python build files
+*.pyc
+*.pyo

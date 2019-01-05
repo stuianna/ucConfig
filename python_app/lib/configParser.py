@@ -15,6 +15,7 @@ if getattr(sys, 'frozen', False):
 else:
     dir_path = os.path.dirname(os.path.abspath(__file__)) + os.sep
 
+
 class ConfigParser():
 
     def __init__(self):
@@ -90,7 +91,7 @@ class ConfigParser():
                 logging.warning('Config parameter {} too large, maximum is {}'.format(key,self.defaultConfig[i]['max']))
                 return False
 
-            if configFile[key] < self.defaultConfig[i]['min'] and self.defaultConfig[i]['max'] != 'None':
+            if configFile[key] < self.defaultConfig[i]['min'] and self.defaultConfig[i]['min'] != 'None':
                 logging.warning('Config parameter {} too small, minimum is {}'.format(key,self.defaultConfig[i]['max']))
                 return False
 

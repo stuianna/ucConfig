@@ -1,77 +1,49 @@
-- dataType: int32_t
-  desc: A randomly generated variable
-  max: 2147483647
-  min: -2147483647
-  name: random_variable_0
-  value: 410225115
-
-- dataType: uint16_t
-  desc: A randomly generated variable
-  max: 65535
-  min: 0
-  name: random_variable_1
-  value: 5983
-
-- dataType: int16_t
-  desc: A randomly generated variable
-  max: 32767
-  min: -32767
-  name: random_variable_2
-  value: -4377
-
-- dataType: uint32_t
-  desc: A randomly generated variable
-  max: 4294967295
-  min: 0
-  name: random_variable_3
-  value: 1403594382
-
-- dataType: uint32_t
-  desc: A randomly generated variable
-  max: 4294967295
-  min: 0
-  name: random_variable_4
-  value: 1261873164
-
 - dataType: char
   desc: A randomly generated variable
   max: 127
   min: 32
-  name: random_variable_5
-  value: 71
+  name: random_variable_0
+  value: 48
 
 - dataType: uint8_t
   desc: A randomly generated variable
   max: 255
   min: 0
+  name: random_variable_1
+  value: 228
+
+- dataType: int8_t
+  desc: A randomly generated variable
+  max: 127
+  min: -127
+  name: random_variable_2
+  value: -43
+
+- dataType: int8_t
+  desc: A randomly generated variable
+  max: 127
+  min: -127
+  name: random_variable_3
+  value: -53
+
+- dataType: char
+  desc: A randomly generated variable
+  max: 127
+  min: 32
+  name: random_variable_4
+  value: 46
+
+- dataType: float
+  desc: A randomly generated variable
+  max: 214748.3647
+  min: -214748.3647
+  name: random_variable_5
+  value: -194836.75642122366
+
+- dataType: float
+  desc: A randomly generated variable
+  max: 214748.3647
+  min: -214748.3647
   name: random_variable_6
-  value: 202
-
-- dataType: char
-  desc: A randomly generated variable
-  max: 127
-  min: 32
-  name: random_variable_7
-  value: 101
-
-- dataType: float
-  desc: A randomly generated variable
-  max: 214748.3647
-  min: -214748.3647
-  name: random_variable_8
-  value: -194033.81582356774
-
-- dataType: float
-  desc: A randomly generated variable
-  max: 214748.3647
-  min: -214748.3647
-  name: random_variable_9
-  value: -61398.85113674216
-
-- dataType: char
-  desc: A randomly generated variable
-  max: 127
-  min: 32
-  name: random_variable_10
-  value: 54
+  value: -165355.71787696774
 
